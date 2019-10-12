@@ -27,13 +27,12 @@ export default {
      previewTracks: '',
      identity: '',
      roomName: "",
-     username: "",
-     room_name: ""
+     username: "username", // Hard-coded: to-do: a form to capture this data
+     room_name: "demo"
    }
  },
- props: [], // props that will be passed to this component
+ props: ['username', 'room_name'], // props that will be passed to this component
  created() {
-      
       this.createChat(this.room_name);
     
 
@@ -43,7 +42,7 @@ export default {
  },
   methods: {
     async getAccessToken() {
-      return await axios.get(`http://localhost:3000/token?identity=${this.username}`);
+      return await axios.get(`http://localhost:3000/join-room?identity?=${this.username}`);
     },
     // Trigger log events 
    dispatchLog(message) {

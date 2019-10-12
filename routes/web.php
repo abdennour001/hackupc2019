@@ -14,3 +14,31 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::post('/tes',[
+    'uses' => 'MainController@roomVideo',
+    'as' => 'roomVideo'
+]);
+
+Route::post('/check',[
+    'uses' => 'MainController@checkFull',
+    'as' => 'roomVideo'
+]);
+
+
+Route::get('/add',[
+    'uses' => 'MainController@add',
+    'as' => 'add'
+]);
+
+
+Route::get('/sub',[
+    'uses' => 'MainController@sub',
+    'as' => 'sub'
+]);
+
+
+Route::get('/join',[
+    'uses' => 'MainController@joinRoom',
+    'as' => 'joinroom'
+]);

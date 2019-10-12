@@ -13,12 +13,10 @@
 </template>
 
 <script>
-import { EventBus } from '../Event'
 import Twilio, { connect, createLocalTracks, createLocalVideoTrack } from 'twilio-video'
-import axios from 'axios'
 
 export default {
- name: "Video",
+ name: "video_component",
  data() {
    return {
      loading: false,
@@ -29,9 +27,11 @@ export default {
      previewTracks: '',
      identity: '',
      roomName: "",
+     username: "",
+     room_name: ""
    }
  },
- props: ['username', 'room_name'], // props that will be passed to this component
+ props: [], // props that will be passed to this component
  created() {
       
       this.createChat(this.room_name);

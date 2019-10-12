@@ -21,6 +21,8 @@
 <body>
 <div id="app">
     @yield('content')
+      <video_component username="Hi" room_name="439i94k3">
+      </video_component>
 </div>
                     <!--YouTube Embed VideoPlayer-->
                     <div id="player1"></div>

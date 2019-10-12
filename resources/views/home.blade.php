@@ -20,9 +20,7 @@
             </div>
         </div>
 
-        <div>
-                <App></App>
-            </div>
+
 
         <!--Modal: modalYT-->
         <div class="modal fade" id="modalYT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"

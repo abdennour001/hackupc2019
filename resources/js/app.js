@@ -21,8 +21,8 @@ window.Vue = require('vue');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-Vue.component('App', require('./components/App.vue').default);
-Vue.component('Video', require('./components/Video.vue').default);
+//Vue.component('App', require('./components/App.vue').default);
+Vue.component('video_component', require('./components/video_component.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

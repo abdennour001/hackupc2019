@@ -22,8 +22,15 @@
 </head>
 <body>
 
+<div class="background"></div>
+
 <div id="app">
     @yield('content')
 </div>
+
+<div class="footer text-center">
+    WeWatch App, HackUPC 2019
+</div>
+
 </body>
 </html>

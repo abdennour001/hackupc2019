@@ -10,7 +10,7 @@
                 <hr class="w-25" style="background: #F44463; opacity: 0.5;">
             </div>
         </div>
-        <div class="row text-center" style="height: 80vh">
+        <div class="row text-center mt-5" style="height: 80vh">
             {{--            row 1--}}
             <div class="col-4 pb-4">
                 <div class="box animals" data-category="animals">

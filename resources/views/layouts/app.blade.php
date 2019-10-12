@@ -33,5 +33,6 @@
   <script src="js/pubnub.min.js"></script>
   <script src="js/videosync.js"></script>
   <script src="js/myjs.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

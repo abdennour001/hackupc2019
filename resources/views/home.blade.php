@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container-fluid w-75 p-5">
         <div class="row text-center">
@@ -20,6 +19,11 @@
                 </div>
             </div>
         </div>
+
+        <div>
+                <App></App>
+            </div>
+
         <!--Modal: modalYT-->
         <div class="modal fade" id="modalYT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">

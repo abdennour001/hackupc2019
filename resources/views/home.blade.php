@@ -10,7 +10,7 @@
                 <h1 class="display-4">Our HackUPC 2019 nice App</h1>
             </div>
             <div class="col-12 mb-5">
-                <p class="lead" style="font-size: 1.3rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p class="lead" id="text" style="font-size: 1.3rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
             <div class="col-12">
                 <div class="d-flex justify-content-center">
@@ -40,8 +40,6 @@
                                     allowfullscreen></iframe>
                         </div>
                     </div>
-                    <!--YouTube Embed VideoPlayer-->
-                    <div id="player1"></div>
 
                     <!--Footer-->
                     <div class="modal-footer justify-content-center flex-column flex-md-row">

@@ -1,3 +1,30 @@
+var tag = document.createElement('script');
+
+tag.src = "http://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var rand = Math.random().toString();
+
+var vidSync1 = new VideoSync("A9HV5O8Un6k", rand);
+
+var player1;
+
+var ready = true;
+if (ready) {
+
+	function onYouTubeIframeAPIReady() {
+	    player1 = new YT.Player('player1', {
+		height: '200',
+		width: '200',
+		videoId: 'A9HV5O8Un6k',
+		events: {
+		    'onReady': vidSync1.onPlayerReady,
+		    'onStateChange': vidSync1.onPlayerStateChange
+		}
+	    });
+
+	 }
+}
 $(document).ready(function(){
     /* Init variables */
     var hasClicked = false;
@@ -44,7 +71,8 @@ $(document).ready(function(){
                       if(result.added_room === true){
                          setTimeout(checkFull,interval);
                       }else if(result.room_full === true){
-                          openYoutubeVideo();
+			      ready = true;
+                          //openYoutubeVideo();
                       }else{
                         setTimeout(checkFull,interval);
                       }
@@ -56,6 +84,10 @@ $(document).ready(function(){
     }
 
     function openYoutubeVideo() {
+	    /* video is always open, but hidden
+	     * when this function is called, the video appears
+	     * all the other pages disappear 
+	     */
                var tag = document.createElement('script');
 
                tag.src = "http://www.youtube.com/iframe_api";
@@ -66,6 +98,7 @@ $(document).ready(function(){
                var vidSync1 = new VideoSync("A9HV5O8Un6k", rand);
            
                var player1;
+	       console.log(rand);
            
                function onYouTubeIframeAPIReady() {
                    player1 = new YT.Player('player1', {
@@ -104,7 +137,7 @@ $(document).ready(function(){
                         setTimeout(checkFull,interval);
                       }else{
                           console.log("called on true");
-			  openYoutubeVideo();
+			  //openYoutubeVideo();
                       }
                   },
                   error: function(jqXHR, textStatus, error){

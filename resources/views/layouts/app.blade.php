@@ -22,6 +22,8 @@
 <div id="app">
     @yield('content')
 </div>
+                    <!--YouTube Embed VideoPlayer-->
+                    <div id="player1"></div>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

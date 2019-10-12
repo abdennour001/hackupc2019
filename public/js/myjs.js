@@ -1,3 +1,33 @@
+var tag = document.createElement('script');
+
+tag.src = "http://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var rand = Math.random().toString();
+
+var vidSync1 = new VideoSync("A9HV5O8Un6k", rand);
+
+var player1;
+function openYoutubeVideo() {
+
+function onYouTubeIframeAPIReady() {
+   player1 = new YT.Player('player1', {
+       height: '200',
+       width: '200',
+       videoId: 'A9HV5O8Un6k',
+       events: {
+           'onReady': vidSync1.onPlayerReady,
+           'onStateChange': vidSync1.onPlayerStateChange
+       }
+   });
+
+}
+
+onYouTubeIframeAPIReady();
+}
+
+
+
 $(document).ready(function(){
     /* Init variables */
     var hasClicked = false;
@@ -44,8 +74,7 @@ $(document).ready(function(){
                       if(result.added_room === true){
                          setTimeout(checkFull,interval);
                       }else if(result.room_full === true){
-                          /* You should call your APIs */
-                          //VideoSync()
+                          openYoutubeVideo();
                       }else{
                         setTimeout(checkFull,interval);
                       }
@@ -55,6 +84,7 @@ $(document).ready(function(){
                   }
               });
     }
+
 
 
     function checkFull() {
@@ -78,9 +108,8 @@ $(document).ready(function(){
                         setTimeout(checkFull,interval);
                       }else{
                           console.log("called on true");
-                          // Take me to Video show
-                          /* You should call your APIs */
-                        
+			  
+			  openYoutubeVideo();
                       }
                   },
                   error: function(jqXHR, textStatus, error){

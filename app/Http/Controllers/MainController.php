@@ -21,8 +21,8 @@ class MainController extends Controller
        $this->key = config('services.twilio.key');
        $this->secret = config('services.twilio.secret');
     }
-    
-    public $max_nb_users = 4;
+
+    public $max_nb_users = 2;
 
     public function roomVideo(Request $request){
         $room = Room::orderBy('id','asc')->where('nb_users','<',''.$this->max_nb_users)->first();

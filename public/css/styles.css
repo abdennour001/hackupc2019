@@ -33,3 +33,135 @@
 .link-container:hover .custom-link {
     color: #F44463;
 }
+
+.modal-head {
+   background: #F44463;
+}
+
+/* return button */
+.return-link {
+    text-decoration: none!important;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+.return-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F44463;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    transition: 0.5s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.return-container:hover {
+    transform: scale(1.1);
+    background: #fff;
+}
+
+.return-container:active {
+    transform: scale(1);
+    background: #fff;
+}
+
+.return-container:hover .return-link {
+    color: #F44463;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(64, 64, 64, 0.6);
+    transition: 0.2s ease;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.box:hover h2 {
+    background: rgba(64, 64, 64, 0.7);
+    transform: scale(1.1);
+}
+
+.box h2 {
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    background: rgba(64, 64, 64, 0.6);
+    transition: 0.5s ease;
+}
+
+.box:active h2 {
+    transform: scale(3);
+}
+
+h1 {
+    color: #F44463;
+}
+
+.animals {
+    background: url("https://images.unsplash.com/photo-1503066211613-c17ebc9daef0?ixlib=rb-1.2.1&w=1000&q=80") no-repeat center;
+    background-size: cover;
+}
+
+.science {
+    background: url('http://maestrocursos.com.br/wp-content/uploads/2017/12/Albert-Einstein-Documentary-HD.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.sport {
+    background: url('https://img.nh-hotels.net/destinations-spain_catalonia_barcelona_nou_camp.jpg?output-quality=70&resize=774:309&composite-to=center,center|774:309&background-color=white') no-repeat center;
+    background-size: cover;
+}
+
+.history {
+    background: url('https://aklatangtibak.files.wordpress.com/2017/05/lenin2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.gaming {
+    background: url('http://getwallpapers.com/wallpaper/full/3/f/4/145790.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.ai {
+    background: url('https://coda.newjobs.com/api/imagesproxy/ms/cms/content30/images/partnership-on-ai.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.checked {
+    border: 2px solid #F44463;
+    transform: scale(1.04);
+}
+
+.checked-symbol {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    background: rgba(244, 68, 99, 0.2);
+    margin: 0;
+    font-size: 2.5rem;
+    color: #F44463;
+    transition: 0.5s ease;
+}
+
+.display-i {
+    display: inline-block;
+}
+
+.not-display-i {
+    display: none;
+}

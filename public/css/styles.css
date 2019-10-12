@@ -1,0 +1,35 @@
+.custom-link {
+    text-decoration: none!important;
+    font-size: 2.1rem;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9561e2;
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    transition: 0.5s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.link-container:hover {
+    transform: scale(1.2);
+    background: #fff;
+}
+
+.link-container:active {
+    transform: scale(1.6);
+    background: #fff;
+}
+
+.link-container:hover .custom-link {
+    color: #9561e2;
+}

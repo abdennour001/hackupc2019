@@ -28,6 +28,8 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
+  <script src="js/pubnub.min.js"></script>
+  <script src="js/videosync.js"></script>
   <script src="js/myjs.js"></script>
 </body>
 </html>

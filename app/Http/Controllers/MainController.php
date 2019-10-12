@@ -2,11 +2,27 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-
+use Twilio\Jwt\AccessToken;
+use Twilio\Jwt\Grants\VideoGrant;
 use App\Room;
 
 class MainController extends Controller
 {
+    protected $sid;
+    protected $token;
+    protected $key;
+    protected $secret;
+    
+    public function __construct()
+    {
+       $this->sid = config('services.twilio.sid');
+       $this->token = config('services.twilio.token');
+       $this->key = config('services.twilio.key');
+       $this->secret = config('services.twilio.secret');
+    }
+
+
+
     public function roomVideo(Request $request){
         $room = Room::orderBy('id','asc')->where('nb_users','<','4')->first();
         if($room == null){
@@ -76,5 +92,21 @@ class MainController extends Controller
         $room = Room::find(1);
         $room->nb_users = $room->nb_users - 1;
         $room->save();
+    }
+
+
+    public function joinRoom(){
+    // A unique identifier for this user
+    $identity = "our_user";
+
+    //\Log::debug("joined with identity: $identity");
+    $token = new AccessToken($this->sid, $this->key, $this->secret, 3600, $identity);
+
+    $videoGrant = new VideoGrant();
+    $videoGrant->setRoom("our_room_name");
+
+    $token->addGrant($videoGrant);
+    dd($token->toJWT());
+    //return view('room', [ 'accessToken' => $token->toJWT(), 'roomName' => $roomName ]);
     }
 }

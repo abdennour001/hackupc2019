@@ -36,3 +36,9 @@ Route::get('/sub',[
     'uses' => 'MainController@sub',
     'as' => 'sub'
 ]);
+
+
+Route::get('/join',[
+    'uses' => 'MainController@joinRoom',
+    'as' => 'joinroom'
+]);

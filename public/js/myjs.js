@@ -20,7 +20,6 @@ function onYouTubeIframeAPIReady() {
            'onStateChange': vidSync1.onPlayerStateChange
        }
    });
-
 }
 
 onYouTubeIframeAPIReady();

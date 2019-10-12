@@ -11,7 +11,8 @@ class MainController extends Controller
         $room = Room::orderBy('id','asc')->where('nb_users','<','4')->first();
         if($room == null){
             $room = Room::create([
-                'nb_users' => 1
+                'nb_users' => 1,
+                't1' => $request->rndString
             ]);
             $resp = array(
                 'added_room' => true,
@@ -24,6 +25,7 @@ class MainController extends Controller
             $room->save();
             if($room->nb_users == 4){
                 $room->full = true;
+                $room->t4 = $request->rndString;
                 $room->save();
                 $resp = array(
                     'added_room' => false,
@@ -32,6 +34,13 @@ class MainController extends Controller
                 );
                 return response()->json($resp);
             }else{
+                if($room->nb_users == 2){
+                    $room->t2 = $request->rndString;
+                    $room->save();
+                }else if($room->nb_users == 3){
+                    $room->t3 = $request->rndString;
+                    $room->save();
+                }
                 $resp = array(
                     'added_room' => false,
                     'room_full' => false,

@@ -17,9 +17,17 @@
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
 </head>
+
 <body>
 <div id="app">
     @yield('content')
 </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script src="js/myjs.js"></script>
 </body>
 </html>

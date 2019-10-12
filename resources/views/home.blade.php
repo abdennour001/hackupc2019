@@ -15,7 +15,7 @@
             <div class="col-12">
                 <div class="d-flex justify-content-center">
                     <div class="link-container">
-                        <a href="#" class="custom-link" data-toggle="modal" data-target="#modalYT"><i class="fa fa-rocket"></i></a>
+                        <a href="#" id="ajaxSubmit" class="custom-link"><i class="fa fa-rocket"></i></a>
                     </div>
                 </div>
             </div>

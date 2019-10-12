@@ -25,7 +25,7 @@
       </video_component>
 </div>
                     <!--YouTube Embed VideoPlayer-->
-                    <div id="player1"></div>
+                    <div id="player1" class="video"></div>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

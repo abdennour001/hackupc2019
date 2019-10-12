@@ -7,8 +7,9 @@ use App\Room;
 
 class MainController extends Controller
 {
+    public $max_nb_users = 4;
     public function roomVideo(Request $request){
-        $room = Room::orderBy('id','asc')->where('nb_users','<','4')->first();
+        $room = Room::orderBy('id','asc')->where('nb_users','<',''.$this->max_nb_users)->first();
         if($room == null){
             $room = Room::create([
                 'nb_users' => 1,
@@ -23,7 +24,7 @@ class MainController extends Controller
         }else{
             $room->nb_users = $room->nb_users + 1;
             $room->save();
-            if($room->nb_users == 4){
+            if($room->nb_users == 2){
                 $room->full = true;
                 $room->t4 = $request->rndString;
                 $room->save();
@@ -34,7 +35,7 @@ class MainController extends Controller
                 );
                 return response()->json($resp);
             }else{
-                if($room->nb_users == 2){
+                if($room->nb_users == $this->max_nb_users){
                     $room->t2 = $request->rndString;
                     $room->save();
                 }else if($room->nb_users == 3){

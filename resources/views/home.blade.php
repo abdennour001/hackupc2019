@@ -40,6 +40,8 @@
                                     allowfullscreen></iframe>
                         </div>
                     </div>
+                    <!--YouTube Embed VideoPlayer-->
+                    <div id="player1"></div>
 
                     <!--Footer-->
                     <div class="modal-footer justify-content-center flex-column flex-md-row">

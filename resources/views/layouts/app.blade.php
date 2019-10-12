@@ -21,9 +21,11 @@
 <body>
 <div id="app">
     @yield('content')
+      <video_component username="Hi" room_name="439i94k3">
+      </video_component>
 </div>
                     <!--YouTube Embed VideoPlayer-->
-                    <div id="player1"></div>
+                    <div id="player1" class="video"></div>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -33,5 +35,6 @@
   <script src="js/pubnub.min.js"></script>
   <script src="js/videosync.js"></script>
   <script src="js/myjs.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

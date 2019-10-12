@@ -24,8 +24,17 @@ function onYouTubeIframeAPIReady() {
 }
 
 onYouTubeIframeAPIReady();
+transitionToVideo();
 }
 
+/** Changes the elements to show the video playing and video chatting instead.
+ * uses the jquery selectors of:	
+ * $("li:not(.myclass)")
+ * Selects all elements matched by <li> that do not have class = "myclass".
+ */
+function transitionToVideo() {
+    $("div:not(.video)").hide();	
+}
 
 
 $(document).ready(function(){

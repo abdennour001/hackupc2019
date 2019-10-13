@@ -3,13 +3,13 @@
     <div class="container-fluid w-75 p-5">
         <div class="row text-center">
             <div class="col-12 mb-5">
-                <img style="width: 20%" src="https://miro.medium.com/max/6580/1*m7y8V4eoihnIcGm-ZL-z0A.png" alt="logo goes here...">
+                <img style="width: 20%" src="https://files.slack.com/files-pri/TN4R611DW-FNYDPGWE6/elearning__1_.png" alt="logo goes here...">
             </div>
             <div class="col-12 mb-5 tohide">
-                <h1 class="display-4">Our HackUPC 2019 nice App</h1>
+                <h1 class="display-4">Visi</h1>
             </div>
             <div class="col-12 mb-5 tohide">
-                <p class="lead" style="font-size: 1.3rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p class="lead" style="font-size: 1.3rem">Bringing back the connection to social media with real-time video-chatting while streaming videos with a group of strangers..</p>
             </div>
             <div class="col-12">
                 <div class="d-flex justify-content-center">
@@ -23,7 +23,6 @@
                 </div>
             </div>
         </div>
-
 
         <!--Modal: modalYT-->
         <div class="modal fade" id="modalYT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -57,5 +56,21 @@
             </div>
         </div>
         <!--Modal: modalYT-->
+    </div>
+    <div class="live-chat-room">
+        <div class="d-flex justify-content-between px-5" style="color: #F44463;">
+            <div class="d-flex chat-container justify-content-center align-items-center flex-column">
+                <i class="fa fa-user" style="font-size: 4rem"></i>
+            </div>
+            <div class="d-flex chat-container justify-content-center align-items-center flex-column">
+                <i class="fa fa-user" style="font-size: 4rem"></i>
+            </div>
+            <div class="d-flex chat-container justify-content-center align-items-center flex-column">
+                <i class="fa fa-user" style="font-size: 4rem"></i>
+            </div>
+            <div class="d-flex chat-container justify-content-center align-items-center flex-column">
+                <i class="fa fa-user" style="font-size: 4rem"></i>
+            </div>
+        </div>
     </div>
 @endsection

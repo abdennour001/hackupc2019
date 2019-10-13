@@ -4,16 +4,7 @@
     <div class="container-fluid p-5">
         <div class="row text-center pb-4">
             <div class="col-12">
-                <div class="row text-center">
-                    <div class="col-4">
-                    </div>
-                    <div class="col-4">
-                        <h1 class="display-4">Categories</h1>
-                    </div>
-                    <div class="col-4 text-right">
-                        <a id="movetohome" href="#"><img src="assets/arrow.png" alt="arrow_img"></a>
-                    </div>
-                </div>
+                <h1 class="display-4">Categories</h1>
             </div>
             <div class="col-12">
                 <hr class="w-25" style="background: #F44463; opacity: 0.5;">
@@ -93,6 +84,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="d-flex text-center justify-content-center align-items-center mt-3">
+            <div class="return-container">
+                <a id="movetohome" href="#"><i class="fa fa-arrow-right return-link"></i></a>
             </div>
         </div>
     </div>

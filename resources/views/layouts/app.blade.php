@@ -37,7 +37,7 @@
 
 
 <div class="footer text-center tohide">
-    WeWatch App, HackUPC 2019
+    Visi App, HackUPC 2019
 </div>
 
 </body>

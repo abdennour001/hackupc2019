@@ -1,4 +1,6 @@
-# video_calls
+# Visi
+
+## IMPORTANT: Check out the 'laravel' branch for final code
 
 ## Project setup
 ```

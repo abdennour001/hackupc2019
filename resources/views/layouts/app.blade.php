@@ -11,30 +11,28 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="{{ asset('js/scripts.js') }}"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
-</head>
 
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+</head>
 <body>
+
+
+<div class="background"></div>
 
 <div id="app">
     @yield('content')
 </div>
-                    <!--YouTube Embed VideoPlayer-->
-                    <div id="player1" class="video"></div>
 
+<div class="footer text-center">
+    WeWatch App, HackUPC 2019
+</div>
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-
-  <script src="js/pubnub.min.js"></script>
-  <script src="js/videosync.js"></script>
-  <script src="js/myjs.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

@@ -22,14 +22,9 @@ window.Vue = require('vue');
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 //Vue.component('App', require('./components/App.vue').default);
-<<<<<<< HEAD
-Vue.component('video-component', require('./components/VideoComponent.vue').default);
-Vue.component('cp', require('./components/cp.vue').default);
-=======
-Vue.component('video-chat', require('./components/VideoChat.vue').default);
-Vue.component('test', require('./components/test.vue').default);
 
->>>>>>> e927df69b2faf3da82e17c1047cd62f6a3e08eb0
+Vue.component('video-chat', require('./components/VideoChat.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -38,12 +33,4 @@ Vue.component('test', require('./components/test.vue').default);
 
 const app = new Vue({
     el: '#app',
-<<<<<<< HEAD
-    components: {
-        VideoComponent,
-        cp
-    }
 });
-=======
-});
->>>>>>> e927df69b2faf3da82e17c1047cd62f6a3e08eb0

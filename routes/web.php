@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('categories');
 });
 
+Route::get('/home', function(){
+    return view('home');
+});
+
 Route::post('/tes',[
     'uses' => 'MainController@roomVideo',
     'as' => 'roomVideo'
@@ -22,6 +26,12 @@ Route::post('/tes',[
 
 Route::post('/check',[
     'uses' => 'MainController@checkFull',
+    'as' => 'roomVideo'
+]);
+
+
+Route::get('/test',[
+    'uses' => 'MainController@test',
     'as' => 'roomVideo'
 ]);
 

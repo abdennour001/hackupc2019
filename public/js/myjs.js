@@ -1,4 +1,17 @@
 var tag = document.createElement('script');
+var twilio_token = "";
+/* Init variables */
+var hasClicked = false;
+
+var interval = 1000;  //ms
+
+var rndString = "";
+// set the length of the string
+var stringLength = 15;
+var my_room_id = 0;
+// list containing characters for the random string
+var stringArray = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var rndString = "";
 
 tag.src = "http://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -6,12 +19,11 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player1;
 function openYoutubeVideo(room_id) {
 	   var rand = Math.random().toString();
-	   console.log(room_id);
 	   var vidSync1 = new VideoSync(room_id, rand);
 	function onYouTubeIframeAPIReady() {
 	   player1 = new YT.Player('player1', {
-	       height: '200',
-	       width: '200',
+	       height: '450',
+	       width: '600',
 	       videoId: 'A9HV5O8Un6k',
 	       events: {
 		   'onReady': vidSync1.onPlayerReady,
@@ -31,24 +43,16 @@ transitionToVideo();
  * Selects all elements matched by <li> that do not have class = "myclass".
  */
 function transitionToVideo() {
-    $("div:not(.video)").hide();
-    	
+    $('.tohide').hide();
+    $('#video_container').css('margin-top','50px');
+    $('#video_container').show();
+    $('#modalYT').modal('hide');
+    //$("div:not(.video)").hide();
+    //showVideo();
 }
 
 
 $(document).ready(function(){
-    /* Init variables */
-    var hasClicked = false;
-    
-    var interval = 1000;  //ms
-    
-    var rndString = "";
-    // set the length of the string
-	var stringLength = 15;
-    var my_room_id = 0;
-    // list containing characters for the random string
-    var stringArray = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-    var rndString = "";
 
     function generateToken(){
 
@@ -59,9 +63,7 @@ $(document).ready(function(){
         };
     }
 
-    generateToken();
 
-    console.log(rndString);
     function playVideo() {
             $.ajaxSetup({
                 headers: {
@@ -126,12 +128,12 @@ $(document).ready(function(){
 
     $('#ajaxSubmit').click(function(e){
         hasClicked = true;
-
+        $('#modalYT').modal('show');
         playVideo();
     });
 
 
-    function showVideo(){
+    function showVideo(token){
         Twilio.Video.createLocalTracks({
             audio: true,
             video: { width: 300 }
@@ -144,5 +146,28 @@ $(document).ready(function(){
          }).then(function(room) {
             console.log('Successfully joined a Room: ', room.name);
          });
+    }
+
+
+    function getToken(){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
+          $.ajax({
+            url: '/tes',
+              type : 'POST',
+              data: {
+
+              },
+              dataType: 'JSON',
+              success: function(result){
+                    twilio_token = result.twilio_token;
+              },
+              error: function(jqXHR, textStatus, error){
+                  console.log(error);
+              }
+          });
     }
 });

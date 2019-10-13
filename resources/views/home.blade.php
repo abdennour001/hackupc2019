@@ -57,7 +57,7 @@
         </div>
         <!--Modal: modalYT-->
     </div>
-    <div class="live-chat-room">
+    <div class="live-chat-room" style="display:none;">
         <div class="d-flex justify-content-between px-5" style="color: #F44463;">
             <div class="d-flex chat-container justify-content-center align-items-center flex-column">
                 <i class="fa fa-user" style="font-size: 4rem"></i>

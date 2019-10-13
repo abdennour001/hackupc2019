@@ -46,6 +46,7 @@ function transitionToVideo() {
     $('.tohide').hide();
     $('#video_container').css('margin-top','50px');
     $('#video_container').show();
+    $('.live-chat-room').show();
     $('#modalYT').modal('hide');
     //$("div:not(.video)").hide();
     //showVideo();

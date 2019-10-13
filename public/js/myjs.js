@@ -63,6 +63,8 @@ $(document).ready(function(){
         };
     }
 
+    generateToken();
+
 
     function playVideo() {
             $.ajaxSetup({

@@ -22,8 +22,8 @@ window.Vue = require('vue');
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 //Vue.component('App', require('./components/App.vue').default);
-Vue.component('video_component', require('./components/video_component.vue').default);
-
+Vue.component('video-component', require('./components/VideoComponent.vue').default);
+Vue.component('cp', require('./components/cp.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -32,4 +32,8 @@ Vue.component('video_component', require('./components/video_component.vue').def
 
 const app = new Vue({
     el: '#app',
+    components: {
+        VideoComponent,
+        cp
+    }
 });

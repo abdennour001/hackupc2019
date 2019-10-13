@@ -31,7 +31,8 @@ transitionToVideo();
  * Selects all elements matched by <li> that do not have class = "myclass".
  */
 function transitionToVideo() {
-    $("div:not(.video)").hide();	
+    $("div:not(.video)").hide();
+    	
 }
 
 
@@ -128,4 +129,20 @@ $(document).ready(function(){
 
         playVideo();
     });
+
+
+    function showVideo(){
+        Twilio.Video.createLocalTracks({
+            audio: true,
+            video: { width: 300 }
+         }).then(function(localTracks) {
+            return Twilio.Video.connect('{{ $accessToken }}', {
+                name: '{{ $roomName }}',
+                tracks: localTracks,
+                video: { width: 300 }
+            });
+         }).then(function(room) {
+            console.log('Successfully joined a Room: ', room.name);
+         });
+    }
 });

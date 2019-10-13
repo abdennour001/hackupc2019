@@ -15,17 +15,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-
+    <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
 </head>
 
 <body>
+
 <div id="app">
     @yield('content')
-      <video_component username="Hi" room_name="439i94k3">
-      </video_component>
 </div>
                     <!--YouTube Embed VideoPlayer-->
                     <div id="player1" class="video"></div>
+
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

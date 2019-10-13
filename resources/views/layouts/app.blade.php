@@ -15,12 +15,19 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
+
+
+  <script src="js/pubnub.min.js"></script>
+  <script src="js/videosync.js"></script>
+    <script src="js/myjs.js"></script>
 </head>
 <body>
+
 
 <div class="background"></div>
 
@@ -28,7 +35,8 @@
     @yield('content')
 </div>
 
-<div class="footer text-center">
+
+<div class="footer text-center tohide">
     WeWatch App, HackUPC 2019
 </div>
 

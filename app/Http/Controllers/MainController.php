@@ -65,7 +65,7 @@ class MainController extends Controller
                 );
                 return response()->json($resp);
             }
-        }        
+        } 
     }
 
     public function checkFull(Request $request){
